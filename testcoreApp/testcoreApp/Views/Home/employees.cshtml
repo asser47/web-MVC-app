@@ -1,0 +1,48 @@
+﻿@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@model testcoreApp.Models.Employee
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <form asp-action="Employees" method="post">
+            <h1>employees Form</h1>
+            <div asp-validation-summary="All"></div>
+            <div>
+            <label asp-for="EmployeeName">Employee Name</label>
+            <input asp-for="EmployeeName" />
+            <div>
+                <label asp-for="Department">Department</label>
+                <select asp-for="Department">
+                    <option></option>
+                    <option value="IT">Information Tech</option>
+                    <option value="operations">Operations</option>
+                    <option value="finance">Finance</option>
+                </select>
+            </div>
+            <div>
+                <label asp-for="IsActive">IsActive</label>
+                <input type="checkbox" asp-for="IsActive" />
+            </div>
+            <div>
+                <label asp-for="JobTitle">Job Title</label>
+                <input asp-for="JobTitle" />
+            </div>
+            <div>
+                <label asp-for="Birthday">BirthDay</label>
+                <input type="date" asp-for="Birthday" />
+            </div>
+            <div>
+                <label asp-for="EmailAddress">Email address</label>
+                <input type="email" asp-for="EmailAddress" />
+            </div>
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </body>
+    </html>

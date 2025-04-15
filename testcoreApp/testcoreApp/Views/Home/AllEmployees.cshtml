@@ -1,0 +1,52 @@
+﻿@using testcoreApp.Models
+@model IEnumerable<Employee>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<!DOCTYPE html>
+    <html>
+    <head>
+        <title>
+            All Employess
+        </title>
+    </head>
+    <body>
+    <h2>Welcome All Employees</h2>
+        <table>
+            <tr>
+                <th>
+                    Name
+                </th>
+            <th>
+                Department
+            </th>
+            <th>
+                job
+            </th>
+            <th>
+                Birthdate
+            </th>
+            <th>
+                Email
+            </th>
+            </tr>
+            <tbody>
+            @foreach (Employee emp in Model)
+            {
+                <tr>
+                    <td>@emp.EmployeeName</td>
+                    <td>@emp.Department</td>
+                    <td>@emp.JobTitle</td>
+                    <td>@emp.Birthday</td>
+                    <td>@emp.EmailAddress</td>
+
+                </tr>
+            }
+            {   
+            }
+            </tbody>
+        </table>
+    </body>
+    </html>
